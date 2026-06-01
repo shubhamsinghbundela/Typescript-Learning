@@ -14,3 +14,16 @@
 // Example Output:
 // true
 
+export interface User {
+  firstName: string;
+  lastName: string;
+  email: string;
+  age: number;
+}
+
+export function isAllowedDomain(user: User, allowedDomain: string): boolean {
+  if (user.email.endsWith(allowedDomain)) {
+    return true;
+  }
+  return false;
+}
