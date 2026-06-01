@@ -10,4 +10,10 @@
 // Example Input 3: []
 // Example Output 3: Throws an error: "Array cannot be empty"
 
+export function findMinimumValue(arr: number[]): number {
+  if (arr.length == 0) {
+    throw new Error("Array cannot be empty");
+  }
 
+  return Math.min(...arr);
+}
