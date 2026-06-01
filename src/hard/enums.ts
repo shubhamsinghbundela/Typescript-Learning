@@ -12,3 +12,19 @@
 // Example Output:
 // "You have selected a window seat."
 
+export enum SeatPosition {
+  Window,
+  Middle,
+  Aisle,
+  INVALID,
+}
+
+export function getSeatDescription(seatPosition: SeatPosition): string {
+  if (seatPosition === SeatPosition.Window) {
+    return `You have selected a window seat.`;
+  } else if (seatPosition === SeatPosition.Aisle) {
+    return `You have selected an aisle seat.`;
+  } else if (seatPosition === SeatPosition.Middle) {
+    return `You have selected a middle seat.`;
+  }
+}
